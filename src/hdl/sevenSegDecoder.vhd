@@ -50,13 +50,18 @@ begin
     o_S(2) <= (not(i_D(3)) and not(i_D(2)) and i_D(1) and not(i_D(0)))
         or (i_D(3) and i_D(2) and not(i_D(0)))
         or (i_D(3) and i_D(2) and i_D(1));
-    o_S(3) <= (not(i_D(3)) and not(i_D(2)) and not(i_D(1)) and (i_D(0)))
-        or (not(i_D(3)) and (i_D(2)) and not(i_D(1)) and not(i_D(0)))
-        or (i_D(3) and not(i_D(2)) and (i_D(1)) and not(i_D(0)))
-        or (i_D(2) and i_D(1) and i_D(0));
-    o_S(4) <= (not(i_D(3)) and (i_D(2)) and not(i_D(1)))
-        or (not(i_D(2)) and not(i_D(1)) and (i_D(0)))
-        or (not(i_D(3)) and (i_D(0)));
+    o_S(3) <= '1' when ( (i_D = "0001") or
+                         (i_D = "0100") or
+                         (i_D = "0111") or
+                         (i_D = "1111") or
+                         (i_D = "1001") or
+                         (i_D = "1010") ) else '0';
+    o_S(4) <= '1' when ( (i_D = "0001") or
+                         (i_D = "0011") or
+                         (i_D = "0101") or
+                         (i_D = "0100") or
+                         (i_D = "0111") or
+                         (i_D = "1001") ) else '0';
     o_S(5) <= '1' when ( (i_D = "0001") or
                          (i_D = "0011") or
                          (i_D = "0010") or

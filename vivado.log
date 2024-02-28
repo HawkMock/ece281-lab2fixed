@@ -17,3 +17,500 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
 open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 802.754 ; gain = 85.055
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevSegDecoder_tb.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevSegDecoder_tb.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd
+update_compile_order -fileset sim_1
+set_property top sevSegDecoder_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sevenSegDecoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj sevenSegDecoder_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sevenSegDecoder
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sevenSegDecoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ff7d8805cc4840629a555a0b65bf5133 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot sevenSegDecoder_tb_behav xil_defaultlib.sevenSegDecoder_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:85]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:87]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:89]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:91]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:93]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:95]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:97]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:99]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:101]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:103]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:105]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:107]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:109]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:111]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:113]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:115]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sevensegdecoder_arch of entity xil_defaultlib.sevenSegDecoder [sevensegdecoder_default]
+Compiling architecture test_bench of entity xil_defaultlib.sevensegdecoder_tb
+Built simulation snapshot sevenSegDecoder_tb_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim/xsim.dir/sevenSegDecoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb 27 17:06:40 2024...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 830.316 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sevenSegDecoder_tb_behav -key {Behavioral:sim_1:Functional:sevenSegDecoder_tb} -tclbatch {sevenSegDecoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sevenSegDecoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: bad x0
+Time: 10 ns  Iteration: 0  Process: /sevenSegDecoder_tb/test_process  File: C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd
+$finish called at time : 10 ns : File "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" Line 85
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sevenSegDecoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 849.262 ; gain = 18.945
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sevenSegDecoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj sevenSegDecoder_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sevenSegDecoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ff7d8805cc4840629a555a0b65bf5133 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot sevenSegDecoder_tb_behav xil_defaultlib.sevenSegDecoder_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:87]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:89]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:91]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:93]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:95]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:97]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:99]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:101]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:103]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:105]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:107]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:109]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:111]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:113]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:115]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sevensegdecoder_arch of entity xil_defaultlib.sevenSegDecoder [sevensegdecoder_default]
+Compiling architecture test_bench of entity xil_defaultlib.sevensegdecoder_tb
+Built simulation snapshot sevenSegDecoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sevenSegDecoder_tb_behav -key {Behavioral:sim_1:Functional:sevenSegDecoder_tb} -tclbatch {sevenSegDecoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sevenSegDecoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: bad x1
+Time: 20 ns  Iteration: 0  Process: /sevenSegDecoder_tb/test_process  File: C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd
+$finish called at time : 20 ns : File "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sevenSegDecoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 858.543 ; gain = 1.113
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top_basys3
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 969.949 ; gain = 104.969
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_basys3' [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/top_basys3.vhd:79]
+INFO: [Synth 8-3491] module 'sevenSegDecoder' declared at 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder.vhd:34' bound to instance 'sevenSegDecoder1_inst' of component 'sevenSegDecoder' [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/top_basys3.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'sevenSegDecoder' [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder.vhd:39]
+WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'o_S_reg' in module 'sevenSegDecoder' in the same process may cause logic issues. 
+ Please split the sync and async parts into different processes [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder.vhd:42]
+WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'o_S_reg' in module 'sevenSegDecoder' in the same process may cause logic issues. 
+ Please split the sync and async parts into different processes [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'sevenSegDecoder' (1#1) [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'top_basys3' (2#1) [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/top_basys3.vhd:79]
+WARNING: [Synth 8-3917] design top_basys3 has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_basys3 has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_basys3 has port an[1] driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1011.344 ; gain = 146.363
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1011.344 ; gain = 146.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1011.344 ; gain = 146.363
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 3 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/Basys3_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.719 ; gain = 458.738
+10 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.719 ; gain = 458.738
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sevenSegDecoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj sevenSegDecoder_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sevenSegDecoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ff7d8805cc4840629a555a0b65bf5133 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot sevenSegDecoder_tb_behav xil_defaultlib.sevenSegDecoder_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:85]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:87]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:89]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:91]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:93]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:95]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:97]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:99]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:101]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:103]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:105]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:107]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:109]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:111]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:113]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:115]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sevensegdecoder_arch of entity xil_defaultlib.sevenSegDecoder [sevensegdecoder_default]
+Compiling architecture test_bench of entity xil_defaultlib.sevensegdecoder_tb
+Built simulation snapshot sevenSegDecoder_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1330.152 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sevenSegDecoder_tb_behav -key {Behavioral:sim_1:Functional:sevenSegDecoder_tb} -tclbatch {sevenSegDecoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sevenSegDecoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: bad x0
+Time: 10 ns  Iteration: 0  Process: /sevenSegDecoder_tb/test_process  File: C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd
+$finish called at time : 10 ns : File "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" Line 85
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sevenSegDecoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1330.152 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sevenSegDecoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj sevenSegDecoder_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sevenSegDecoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ff7d8805cc4840629a555a0b65bf5133 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot sevenSegDecoder_tb_behav xil_defaultlib.sevenSegDecoder_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:87]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:89]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:91]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:93]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:95]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:97]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:99]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:101]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:103]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:105]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:107]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:109]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:111]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:113]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:115]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sevensegdecoder_arch of entity xil_defaultlib.sevenSegDecoder [sevensegdecoder_default]
+Compiling architecture test_bench of entity xil_defaultlib.sevensegdecoder_tb
+Built simulation snapshot sevenSegDecoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sevenSegDecoder_tb_behav -key {Behavioral:sim_1:Functional:sevenSegDecoder_tb} -tclbatch {sevenSegDecoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sevenSegDecoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: bad x1
+Time: 20 ns  Iteration: 0  Process: /sevenSegDecoder_tb/test_process  File: C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd
+$finish called at time : 20 ns : File "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sevenSegDecoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1334.324 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sevenSegDecoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj sevenSegDecoder_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sevenSegDecoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ff7d8805cc4840629a555a0b65bf5133 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot sevenSegDecoder_tb_behav xil_defaultlib.sevenSegDecoder_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:87]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:89]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:91]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:93]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:95]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:97]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:99]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:101]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:103]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:105]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:107]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:109]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:111]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:113]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd:115]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sevensegdecoder_arch of entity xil_defaultlib.sevenSegDecoder [sevensegdecoder_default]
+Compiling architecture test_bench of entity xil_defaultlib.sevensegdecoder_tb
+Built simulation snapshot sevenSegDecoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sevenSegDecoder_tb_behav -key {Behavioral:sim_1:Functional:sevenSegDecoder_tb} -tclbatch {sevenSegDecoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sevenSegDecoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: bad x1
+Time: 20 ns  Iteration: 0  Process: /sevenSegDecoder_tb/test_process  File: C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd
+$finish called at time : 20 ns : File "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sevenSegDecoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1334.324 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sevenSegDecoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj sevenSegDecoder_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sevenSegDecoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ff7d8805cc4840629a555a0b65bf5133 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot sevenSegDecoder_tb_behav xil_defaultlib.sevenSegDecoder_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture sevensegdecoder_arch of entity xil_defaultlib.sevenSegDecoder [sevensegdecoder_default]
+Compiling architecture test_bench of entity xil_defaultlib.sevensegdecoder_tb
+Built simulation snapshot sevenSegDecoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Dustin.Mock/code/ece281-lab2fixed/sevenSegDisplay.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sevenSegDecoder_tb_behav -key {Behavioral:sim_1:Functional:sevenSegDecoder_tb} -tclbatch {sevenSegDecoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sevenSegDecoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sevenSegDecoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1334.324 ; gain = 0.000
+add_bp {C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd} 84
+remove_bps -file {C:/Users/Dustin.Mock/code/ece281-lab2fixed/src/hdl/sevenSegDecoder_tb.vhd} -line 84
