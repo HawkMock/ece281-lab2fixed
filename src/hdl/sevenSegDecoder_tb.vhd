@@ -51,10 +51,10 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
   
-entity sevSegDecoder_tb is
-end sevSegDecoder_tb;
+entity sevenSegDecoder_tb is
+end sevenSegDecoder_tb;
 
-architecture test_bench of sevSegDecoder_tb is 
+architecture test_bench of sevenSegDecoder_tb is 
 
 	-- Component Declaration	
   component sevenSegDecoder is
